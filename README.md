@@ -18,13 +18,13 @@ This will install the Gravpluginmanager plugin into your `/user/plugins`-directo
 
 ### Manual Installation
 
-To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `gravpluginmanager`. You can find these files on [GitHub](https://github.com/a-gmail-com/grav-plugin-gravpluginmanager) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
+To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `gravpluginmanager`. You can find these files on [GitHub](https://github.com//grav-plugin-gravpluginmanager) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
 
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/gravpluginmanager
 	
-> NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com/a-gmail-com/grav-plugin-gravpluginmanager/blob/master/blueprints.yaml).
+> NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com//grav-plugin-gravpluginmanager/blob/master/blueprints.yaml).
 
 ### Admin Plugin
 

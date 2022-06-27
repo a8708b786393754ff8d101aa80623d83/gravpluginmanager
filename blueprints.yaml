@@ -5,13 +5,13 @@ version: 0.1.0
 description: plugin manager other plugin
 icon: plug
 author:
-  name: a6888b
-  email: a@gmail.com
-homepage: https://github.com/a@gmail.com/grav-plugin-gravpluginmanager
+  name: adrien
+  email: adrien@gmail.com
+homepage: https://github.com/adrien/grav-plugin-gravpluginmanager
 demo: http://demo.yoursite.com
 keywords: grav, plugin, etc
-bugs: https://github.com/a@gmail.com/grav-plugin-gravpluginmanager/issues
-docs: https://github.com/a@gmail.com/grav-plugin-gravpluginmanager/blob/develop/README.md
+bugs: https://github.com/adrien/grav-plugin-gravpluginmanager/issues
+docs: https://github.com/adrien/grav-plugin-gravpluginmanager/blob/develop/README.md
 license: MIT
 
 dependencies:

@@ -1,0 +1,36 @@
+name: Gravpluginmanager
+slug: gravpluginmanager
+type: plugin
+version: 0.1.0
+description: plugin manager other plugin
+icon: plug
+author:
+  name: a688b
+  email: a@gmaiol.com
+homepage: https://github.com/a688b/grav-plugin-gravpluginmanager
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/a688b/grav-plugin-gravpluginmanager/issues
+docs: https://github.com/a688b/grav-plugin-gravpluginmanager/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_GRAVPLUGINMANAGER.TEXT_VARIABLE
+      help: PLUGIN_GRAVPLUGINMANAGER.TEXT_VARIABLE_HELP

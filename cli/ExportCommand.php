@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Plugin\Console;
 
 use Grav\Console\ConsoleCommand;
@@ -30,14 +31,11 @@ class ExportCommand extends ConsoleCommand
                 InputArgument::REQUIRED,
                 'Name file input'
             )
-            // ->addOption(
-                // 'file',
-                // 'y',
-                // InputOption::VALUE_NONE,
-                // 'Wheter the greetings should be yelled or quieter'
-            // )
-            // ->setHelp('The <info>Export</info> greets someone.')
-        ;
+            ->addArgument(
+                'output directory',
+                InputArgument::OPTIONAL,
+                'Name file input'
+            );
     }
 
     /**
@@ -45,6 +43,20 @@ class ExportCommand extends ConsoleCommand
      */
     protected function serve()
     {
-        var_dump($this); 
+        $input = $this->getInput();
+        $io = $this->getIO();
+
+        $export_filename = $input->getArgument('name');
+        $ouput = $input->getArgument('output directory');
+
+        if (!file_exists($export_filename)) {
+            var_dump($ouput);
+        } else {
+            $io->error('The file name enter exists');
+        }
+
+        //NOTE ajouter le reperoire d'enregistrement si c'est pas NULL 
+
+
     }
 }

@@ -52,7 +52,13 @@ class ExportCommand extends ConsoleCommand
         if (!file_exists($import_filename)) {
 
             $plugins = getcwd() . '/user/plugins/'; //recupere le chemin complet ou est executer le script(la racine du projet) plus le chemin dossier du plugins
-            $folders_plugin = array_slice(scandir($plugins), 3); // pour supprimer le fichier .gitkeep, .., .
+            $name_os = php_uname('s'); // recupere le nom du systeme exploitation
+            
+            if($name_os === 'Linux'){
+                $folders_plugin = array_slice(scandir($plugins), 3); // pour supprimer le fichier .gitkeep, .., .
+            }else{
+                $folders_plugin = array_slice(scandir($plugins), 1); // pour supprimer le fichier .gitkeep
+            }
 
             if (!is_null($target_folder)) { // si le dossier cible est entrez, le mode d'ouverture est d'ecriture
                 $file = fopen($target_folder . $import_filename, 'w');

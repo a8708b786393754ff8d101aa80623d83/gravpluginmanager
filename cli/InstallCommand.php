@@ -49,7 +49,6 @@ class InstallCommand extends ConsoleCommand
 
             for ($i = 0; $i < $length_plugins; $i++) {
                 if ($plugins[$i] !== "") {
-                    var_dump($plugins[$i]); 
                     system('bin/gpm install ' . $plugins[$i]); //execute la commande pour installer les plugins une par une 
                 }
             }

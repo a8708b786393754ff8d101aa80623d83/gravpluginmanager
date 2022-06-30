@@ -32,39 +32,40 @@ class ExportCommand extends ConsoleCommand
                 'Name file input'
             )
             ->addArgument(
-                'output directory',
+                'target folder',
                 InputArgument::OPTIONAL,
-                'Name file input'
+                'Target folder ouput'
             );
     }
 
     /**
      * @return int|null|void
      */
-    protected function serve()
+    protected function serve(): void
     {
         $input = $this->getInput();
         $io = $this->getIO();
 
-        $export_filename = $input->getArgument('name');
-        $ouput = $input->getArgument('output directory');
+        $import_filename = $input->getArgument('name'); //recuper le nom du fichier 
+        $target_folder = $input->getArgument('target folder'); // recupere le chemin de destination
 
-        if (!file_exists($export_filename)) {
-            $plugins = getcwd() . '/user/plugins/';
+        if (!file_exists($import_filename)) {
+
+            $plugins = getcwd() . '/user/plugins/'; //recupere le chemin complet ou est executer le script(la racine du projet) plus le chemin dossier du plugins
             $folders_plugin = array_slice(scandir($plugins), 3); // pour supprimer le fichier .gitkeep, .., .
 
-            if (is_null($ouput)) {
-                $file = fopen($export_filename, 'w');
+            if (!is_null($target_folder)) { // si le dossier cible est entrez, le mode d'ouverture est d'ecriture
+                $file = fopen($target_folder . $import_filename, 'w');
             } else {
-                $file = fopen($ouput . $export_filename, 'w');
+                $file = fopen($import_filename, 'w');
             }
 
-            foreach ($folders_plugin as $folder) {
+            foreach ($folders_plugin as $folder) { //boucle sur contenue du dossier 
                 if (!is_file($folder)) {
-                    fwrite($file, $folder . ' --- ');
+                    fwrite($file, $folder . ' --- '); // ecris les plugins sur le fichier sur chaque boucle 
                 }
             }
-            $io->success('All plugins have been exported to the file ' . $export_filename);
+            $io->success('All plugins have been exported to the file ' . $import_filename);
         } else {
             $io->error('The file name enter exists');
         }

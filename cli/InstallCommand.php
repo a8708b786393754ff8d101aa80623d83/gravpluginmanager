@@ -45,17 +45,16 @@ class InstallCommand extends ConsoleCommand
         if (file_exists($filename)) {
             $contents = file_get_contents($filename); // recupere le contenue du fichier 
             $plugins = explode(' --- ', $contents); //split le contenue du fichier pour recuperer que les nom de plugins 
-            $length_plugins = count($plugins); 
+            $length_plugins = count($plugins);
 
             for ($i = 0; $i < $length_plugins; $i++) {
                 if ($plugins[$i] !== "") {
                     system('bin/gpm install ' . $plugins[$i]); //execute la commande pour installer les plugins une par une 
                 }
             }
-            $io->success($length_plugins.' plugin is installed'); 
-
+            $io->success($length_plugins . ' plugin is installed');
         } else { // si le fichier donne n'existe pas 
-            $io->error('The file ' . $filename . ' not exists'); 
+            $io->error('The file ' . $filename . ' not exists');
         }
     }
 }

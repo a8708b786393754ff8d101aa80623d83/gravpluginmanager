@@ -49,9 +49,9 @@ class ExportCommand extends ConsoleCommand
         $import_filename = $input->getArgument('name'); //recuper le nom du fichier 
         $target_folder = $input->getArgument('target folder'); // recupere le chemin de destination
 
-        if(! is_null($target_folder) &&  ! file_exists($target_folder)){
+        if (!is_null($target_folder) &&  !file_exists($target_folder)) {
             $io->error('Folder target not exists');
-            die; 
+            die;
         }
 
         if (!file_exists($import_filename)) {

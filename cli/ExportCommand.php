@@ -4,7 +4,6 @@ namespace Grav\Plugin\Console;
 
 use Grav\Console\ConsoleCommand;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 
 /**
  * Class ExportCommand

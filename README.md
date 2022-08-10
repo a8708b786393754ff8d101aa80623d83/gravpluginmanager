@@ -43,6 +43,7 @@ enabled: true
 Note that if you use the Admin Plugin, a file with your configuration named gravpluginmanager.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
 
 ## Usage
+
 Go to the root of your project. 
 ```sh
 bin/plugin gravpluginmanager
@@ -66,4 +67,3 @@ To install the plugins, you must give it the name of the file or the relative pa
 ```sh
 bin/plugin gravpluginmanager install <filename>
 ```
-

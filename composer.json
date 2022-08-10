@@ -1,14 +1,15 @@
 {
-  "name": "adrien/gravpluginmanager",
+
+  "name": "a688b/gravpluginmanager",
   "type": "grav-plugin",
   "description": "plugin manager other plugin",
   "keywords": ["plugin"],
-  "homepage": "https://github.com/adrien/grav-plugin-gravpluginmanager",
+  "homepage": "https://github.com/a688b/grav-plugin-gravpluginmanager",
   "license": "MIT",
   "authors": [
     {
-      "name": "adrien",
-      "email": "adrien@gmail.com",
+      "name": "a688b",
+      "email": "ayoubbrahim68@gmail.com",
       "role": "Developer"
     }
   ],

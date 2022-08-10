@@ -44,13 +44,26 @@ Note that if you use the Admin Plugin, a file with your configuration named grav
 
 ## Usage
 
-**Describe how to use the plugin.**
+Go to the root of your project. 
+```sh
+bin/plugin gravpluginmanager
+```
+There are ways to use the plugin, you can `install` plugins from a file that this has generated or `export` the modules to a file, so that we have two argument.
 
-## Credits
+### Export
+To export the plugins in a file, you must pass the name of the output file (required) and/or the target directory where the file will be saved.
 
-**Did you incorporate third-party code? Want to thank somebody?**
+The syntax to export a file with its name:
+```sh
+bin/plugin gravpluginmanager export <filename> 
+```
+The syntax to export a file with its name is the target directory.
+```sh
+bin/plugin gravpluginmanager export <filename> <directory target>
+```
 
-## To Do
-
-- [ ] Future plans, if any
-
+### Install
+To install the plugins, you must give it the name of the file or the relative path of the file.
+```sh
+bin/plugin gravpluginmanager install <filename>
+```

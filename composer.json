@@ -1,4 +1,5 @@
 {
+
   "name": "a688b/gravpluginmanager",
   "type": "grav-plugin",
   "description": "plugin manager other plugin",
@@ -8,7 +9,7 @@
   "authors": [
     {
       "name": "a688b",
-      "email": "a@gmaiol.com",
+      "email": "ayoubbrahim68@gmail.com",
       "role": "Developer"
     }
   ],
